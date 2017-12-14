@@ -8,7 +8,8 @@ public class PickUpObject : MonoBehaviour {
 	public GameObject tempParent;
 	public Transform guide;
 	void Start () {
-		item.GetComponent<Rigidbody> ().useGravity = true;
+		//item.GetComponent<Rigidbody> ().useGravity = true;
+		GetComponent<MeshRenderer>().material.color = Color.yellow;
 	}
 	
 	// Update is called once per frame
