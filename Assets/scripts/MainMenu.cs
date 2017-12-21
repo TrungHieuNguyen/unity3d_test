@@ -15,6 +15,13 @@ public class MainMenu : MonoBehaviour {
 	public  GameObject _camera;
 	public 	GameObject _ballDir;
 	public 	GameObject _ball;
+
+
+
+	bool isSelecting = false;
+	Vector3 mousePosition1;
+
+
 	void Start () {
 		
 	}
@@ -65,5 +72,30 @@ public class MainMenu : MonoBehaviour {
 		tempRotation.y = value;
 		_ballDir.transform.rotation = Quaternion.Euler(tempRotation);
 	}
+
+
+	void Update()
+	{
+		// If we press the left mouse button, save mouse location and begin selection
+		if( Input.GetMouseButtonDown( 0 ) )
+		{
+			isSelecting = true;
+			mousePosition1 = Input.mousePosition;
+		}
+		// If we let go of the left mouse button, end selection
+		if( Input.GetMouseButtonUp( 0 ) )
+			isSelecting = false;
+	}
+	void OnGUI()
+	{
+		if( isSelecting )
+		{
+			// Create a rect from both mouse positions
+			var rect = Utils.GetScreenRect( mousePosition1, Input.mousePosition );
+			Utils.DrawScreenRect( rect, new Color( 0.8f, 0.8f, 0.95f, 0.25f ) );
+			Utils.DrawScreenRectBorder( rect, 2, new Color( 0.8f, 0.8f, 0.95f ) );
+		}
+	}
+
 
 }
