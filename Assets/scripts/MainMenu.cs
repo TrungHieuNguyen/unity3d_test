@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+// Trung Hieu Nguyen
 public class MainMenu : MonoBehaviour {
 
 	public Slider sliderH;
@@ -41,6 +41,7 @@ public class MainMenu : MonoBehaviour {
 		_camera.transform.rotation = Quaternion.Euler(tempRotation);
 
 	}
+
 	public void silderH_Changed(float value)
 	{
 
@@ -48,6 +49,7 @@ public class MainMenu : MonoBehaviour {
 		tempRotation.y = value;
 		_hero.transform.rotation = Quaternion.Euler(tempRotation);
 	}
+
 	public void silderBallV_Changed(float value)
 	{
 		Vector3 tempRotation = _ballDir.transform.eulerAngles;
@@ -55,6 +57,7 @@ public class MainMenu : MonoBehaviour {
 		_ballDir.transform.rotation = Quaternion.Euler(tempRotation);
 
 	}
+
 	public void silderBallH_Changed(float value)
 	{
 
