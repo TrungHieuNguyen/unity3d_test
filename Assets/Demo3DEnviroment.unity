@@ -1610,7 +1610,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 754160184}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 10, y: 3, z: 10}
+  m_LocalPosition: {x: 10, y: 3.4, z: 10}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 941995971}
@@ -1650,14 +1650,14 @@ Projector:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 754160184}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_NearClipPlane: 1.2
-  m_FarClipPlane: 14
-  m_FieldOfView: 70
+  m_NearClipPlane: 0.1
+  m_FarClipPlane: 4
+  m_FieldOfView: 20
   m_AspectRatio: 1
   m_Orthographic: 0
-  m_OrthographicSize: 2
+  m_OrthographicSize: 10
   m_Material: {fileID: 2100000, guid: 827dbca2bd5844bbe88d83b1d406f2c3, type: 2}
   m_IgnoreLayers:
     serializedVersion: 2
