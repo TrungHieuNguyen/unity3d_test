@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FPSController : MonoBehaviour {
 
-	public float speed = 2.0f;
+	public float speed = 5.0f;
 	public float lookSensitivity = 5.0f;
 	//CharactorController player;
 
@@ -17,7 +17,7 @@ public class FPSController : MonoBehaviour {
 	public float xRotationV;
 	public float yRotationV;
 
-	public float Force = 0.05f;
+	public float Force = 1f;
 	public float xForce;
 	public float yForce;
 	void Start () {
@@ -28,17 +28,20 @@ public class FPSController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Debug.Log("");
-//		xRotation -= Input.GetAxis ("Mouse Y") * lookSensitivity;
-//		yRotation += Input.GetAxis ("Mouse X") * lookSensitivity;
-//		//xRotation = Mathf.Clamp(xRotation,-90,90);
-//		transform.rotation = Quaternion.Euler(xRotation,yRotation,0);
+		//		xRotation -= Input.GetAxis ("Mouse Y") * lookSensitivity;
+		//		yRotation += Input.GetAxis ("Mouse X") * lookSensitivity;
+		//		//xRotation = Mathf.Clamp(xRotation,-90,90);
+		//		transform.rotation = Quaternion.Euler(xRotation,yRotation,0);
 
-		xForce = Input.GetAxis ("Horizontal") * Force;
-		yForce = Input.GetAxis ("Vertical") * Force;
-		transform.Translate (new Vector3(xForce, 0, yForce));
+		xForce = Input.GetAxis("Horizontal") * Force;
+		yForce = Input.GetAxis("Vertical") * Force;
+		transform.Translate(new Vector3(xForce, 0, yForce));
+
+		//var move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+		//transform.position += move * speed * Time.deltaTime;
 
 
 
-		
+
 	}
 }

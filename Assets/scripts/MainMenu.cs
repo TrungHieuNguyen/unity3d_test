@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour {
 	public void BtnX_Clicked()
 	{
 		Vector3 shoot = (_ball.transform.position - _ballDir.transform.position).normalized;
-		_ball.GetComponent<Rigidbody>().AddForce(_ballDir.transform.up* 100.0f);
+		_ball.GetComponent<Rigidbody>().AddForce(_ballDir.transform.up* 1000.0f);
 		//_ball.GetComponent<Rigidbody>().velocity = _ball.transform.forward * 6;
 	}
 
